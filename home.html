@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cortrust Therapeutics LLP</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Hero section with a responsive background image */
+    .hero {
+      background: url('https://via.placeholder.com/1920x600') no-repeat center center/cover;
+      height: 60vh;
+      min-height: 400px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    .hero-content {
+      position: relative;
+      text-align: center;
+      z-index: 1;
+    }
+    .section-title {
+      margin-bottom: 20px;
+    }
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+    @media (max-width: 576px) {
+      .hero {
+        height: 50vh;
+      }
+      .card-img-top {
+        height: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">Cortrust</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+         <ul class="navbar-nav">
+           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+           <li class="nav-item"><a class="nav-link" href="#mission-vision">Mission</a></li>
+           <li class="nav-item"><a class="nav-link" href="#segments">Segments</a></li>
+         </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1 class="display-3 fw-bold">CORTRUST THERAPEUTICS LLP</h1>
+      <p class="lead">Empowering you to take control</p>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Replace the image URL with a high-quality brand image -->
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="https://via.placeholder.com/600x400" alt="About Us" class="img-fluid rounded">
+        </div>
+        <div class="col-md-6">
+          <h2 class="section-title">About Us</h2>
+          <p>We are a leading pharmaceutical company dedicated to meeting unmet medical needs with regulated, high-quality manufacturing and robust channel networks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Vision Section -->
+  <section id="mission-vision" class="py-5 bg-light">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-lg-6 mb-4">
+          <div class="card border-0">
+            <img src="https://via.placeholder.com/600x200" class="card-img-top" alt="Our Mission">
+            <div class="card-body">
+              <h3 class="card-title">Our Mission</h3>
+              <p class="card-text">Setting new benchmarks in healthcare with human expertise.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 mb-4">
+          <div class="card border-0">
+            <img src="https://via.placeholder.com/600x200" class="card-img-top" alt="Our Vision">
+            <div class="card-body">
+              <h3 class="card-title">Our Vision</h3>
+              <p class="card-text">Making medicines affordable and accessible to all patients.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Segments Section -->
+  <section id="segments" class="py-5">
+    <div class="container">
+      <h2 class="section-title text-center mb-5">Therapeutic Segments</h2>
+      <div class="row">
+        <!-- Sample card for each segment -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="diabetic.png" class="card-img-top" alt="Diabetology">
+            <div class="card-body text-center">
+              <h5 class="card-title">Diabetology</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Cardiology">
+            <div class="card-body text-center">
+              <h5 class="card-title">Cardiology</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Neurology">
+            <div class="card-body text-center">
+              <h5 class="card-title">Neurology</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center bg-dark text-light py-3">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Cortrust Therapeutics LLP. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

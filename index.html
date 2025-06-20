@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cortrust Therapeutics LLP - Empowering you to take control with innovative pharmaceutical solutions.">
+    <meta name="keywords" content="pharmaceutical, healthcare, diabetes, antibiotics, neurology, quality standards">
+    <meta name="author" content="Cortrust Therapeutics LLP">
+    <meta name="theme-color" content="#2c3e50">
+    <meta name="msapplication-TileColor" content="#2c3e50">
+    <meta name="msapplication-TileImage" content="mstile-150x150.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+
+    <title>Cortrust Therapeutics LLP</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #27ae60;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--dark-color);
+            position: relative; 
+        }
+        
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 15px 0;
+        }
+        
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .navbar-brand img {
+            height: 45px;
+            width: auto;
+            max-width: 280px;
+            object-fit: contain;
+            transition: height 0.3s ease;
+        }
+        
+        /* Hide text logo on all screens when image is used */
+        .navbar-brand .text-logo {
+            display: none;
+        }
+        
+        .navbar-nav .nav-link {
+            color: var(--dark-color);
+            font-weight: 500;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        
+        .navbar-nav .nav-link:hover {
+            color: var(--accent-color);
+        }
+        
+        .contact-btn {
+            background-color: var(--accent-color);
+            color: white;
+            border-radius: 50px;
+            padding: 8px 20px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .contact-btn:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, rgba(44,62,80,0.9) 0%, rgba(39,174,96,0.8) 100%), url('/api/placeholder/1200/600') center/cover;
+            color: white;
+            padding: 120px 0;
+            margin-bottom: 60px;
+        }
+        
+        .hero h1 {
+            font-weight: 700;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 40px;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-color);
+        }
+        
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .card-body {
+            padding: 25px;
+        }
+        
+        .card-title {
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .mission-vision {
+            background-color: var(--light-color);
+            padding: 80px 0;
+        }
+        
+        .mission-vision-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 10px;
+            height: 100%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .mission-vision-card i {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+        }
+        
+        /* Clean, mobile-first therapy section */
+        .therapy-section {
+            background: #f8f9fa;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .therapy-section:hover {
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        
+        .therapy-header {
+            background: white;
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .therapy-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+        
+        .therapy-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--accent-color);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        
+        .therapy-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 0;
+        }
+        
+        .therapy-description {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+        
+        .therapy-images-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+        
+        .therapy-image-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease;
+            width: 100%;
+        }
+        
+        .therapy-image-item:hover {
+            transform: translateY(-2px);
+        }
+        
+        .therapy-image {
+            width: 100%;
+            height: 120px;
+            object-fit: contain;
+            object-position: center;
+            display: block;
+            transition: opacity 0.3s ease;
+            background: #f8f9fa;
+            border-radius: 8px 8px 0 0;
+        }
+        
+        .therapy-image.loading {
+            opacity: 0.5;
+        }
+        
+        .therapy-image.error {
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 0.8rem;
+        }
+        
+        .image-info {
+            padding: 12px;
+            text-align: center;
+            background: white;
+            border-radius: 0 0 8px 8px;
+        }
+        
+        .image-title {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 0;
+            line-height: 1.3;
+        }
+        
+        .image-placeholder {
+            width: 100%;
+            height: 120px;
+            background: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 0.8rem;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+            border: 2px dashed #ddd;
+        }
+        
+        .placeholder-icon {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+            color: #ccc;
+        }
+        
+        /* Responsive design */
+        @media (min-width: 1200px) {
+            .therapy-images-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        @media (min-width: 992px) and (max-width: 1199px) {
+            .therapy-images-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media (min-width: 768px) and (max-width: 991px) {
+            .therapy-images-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .therapy-image {
+                height: 110px;
+            }
+            
+            .image-placeholder {
+                height: 110px;
+            }
+            
+            /* Tablet logo size */
+            .navbar-brand img {
+                height: 40px;
+                max-width: 240px;
+            }
+        }
+        
+        @media (min-width: 576px) and (max-width: 767px) {
+            .therapy-images-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+                padding: 16px;
+            }
+            
+            .therapy-image {
+                height: 100px;
+            }
+            
+            .image-placeholder {
+                height: 100px;
+            }
+            
+            .image-info {
+                padding: 8px;
+            }
+            
+            .image-title {
+                font-size: 0.8rem;
+            }
+        }
+        
+        @media (max-width: 575px) {
+            .therapy-section {
+                margin-bottom: 20px;
+                border-radius: 12px;
+            }
+            
+            .therapy-header {
+                padding: 16px;
+            }
+            
+            .therapy-name {
+                font-size: 1.2rem;
+            }
+            
+            .therapy-description {
+                font-size: 0.9rem;
+            }
+            
+            .therapy-images-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+                padding: 12px;
+            }
+            
+            .therapy-image {
+                height: 90px;
+            }
+            
+            .image-placeholder {
+                height: 90px;
+            }
+            
+            .image-info {
+                padding: 6px;
+            }
+            
+            .image-title {
+                font-size: 0.75rem;
+            }
+            
+            /* Responsive logo for mobile */
+            .navbar-brand img {
+                height: 35px;
+                max-width: 200px;
+            }
+        }
+        
+        @media (max-width: 375px) {
+            .therapy-images-grid {
+                gap: 8px;
+                padding: 10px;
+            }
+            
+            .therapy-image {
+                height: 80px;
+            }
+            
+            .image-placeholder {
+                height: 80px;
+            }
+            
+            /* Very small screens */
+            .navbar-brand img {
+                height: 30px;
+                max-width: 180px;
+            }
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-heading {
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+        
+        .footer-link {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+        
+        .footer-link:hover {
+            color: var(--accent-color);
+        }
+        
+        .copyright {
+            background-color: rgba(0,0,0,0.2);
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            margin-right: 10px;
+            transition: background 0.3s, color 0.3s;
+        }
+        
+        .social-icon:hover {
+            background: var(--accent-color);
+            color: white;
+        }
+        
+        .about-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        
+        .contact-section {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+        
+        .contact-card {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .contact-info {
+            margin-bottom: 30px;
+        }
+        
+        .contact-info i {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+        
+        .form-control {
+            padding: 12px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .form-control:focus {
+            box-shadow: none;
+            border-color: var(--accent-color);
+        }
+        
+        .btn-submit {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn-submit:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+        
+        /* Styles to ensure navbar elements stay in one row */
+        .navbar .navbar-nav {
+            flex-direction: row !important;
+            align-items: center;
+        }
+        
+        /* Override any Bootstrap responsive behaviors */
+        .navbar-nav {
+            display: flex !important;
+            flex-basis: auto;
+        }
+        
+        /* Bottom fixed contact button styles */
+        .bottom-contact-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--accent-color);
+            color: white;
+            text-align: center;
+            padding: 15px 25px;
+            font-weight: 600;
+            z-index: 1000;
+            display: none;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+        
+        .bottom-contact-btn:hover, 
+        .bottom-contact-btn:focus {
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            transform: translateY(-5px);
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                padding: 80px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .about-section .row {
+                flex-direction: column;
+            }
+            
+            .about-section h2 {
+                margin-top: 20px;
+            }
+            
+            .about-img-container {
+                order: 1;
+            }
+            
+            .about-content {
+                order: 2;
+            }
+            
+            .about-img {
+                height: 300px;
+                margin-bottom: 20px;
+            }
+            
+            .mission-vision-card {
+                margin-bottom: 30px;
+            }
+            
+            .therapy-images-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+                padding: 16px;
+            }
+            
+            .therapy-image {
+                height: 100px;
+            }
+            
+            .image-info {
+                padding: 8px;
+            }
+            
+            .image-title {
+                font-size: 0.8rem;
+            }
+            
+            /* Show bottom contact button on mobile */
+            .bottom-contact-btn {
+                display: block;
+            }
+            
+            /* Hide navbar contact button on mobile */
+            .navbar .contact-btn {
+                display: none;
+            }
+            
+            /* No need for extra padding since we have a floating button now */
+            body {
+                padding-bottom: 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .therapy-images {
+                grid-template-columns: 1fr;
+            }
+            
+            .therapy-image {
+                height: 180px;
+            }
+            
+            .therapy-category {
+                padding: 20px;
+                margin-bottom: 25px;
+            }
+            
+            .therapy-name {
+                font-size: 1.3rem;
+            }
+            
+            .therapy-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 1.3rem;
+            }
+            
+            .preview-images {
+                flex-wrap: wrap;
+            }
+            
+            .therapy-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            
+            .expand-icon {
+                align-self: flex-end;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/cortrust-logo-new.jpeg" alt="Cortrust Therapeutics LLP" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <span class="text-logo" style="display: none; font-weight: 700; color: var(--primary-color); font-size: 1.8rem;">
+                    CORTRUST <span style="color: var(--accent-color);">THERAPEUTICS</span>
+                </span>
+            </a>
+            
+            <div class="navbar-nav" id="navbarNav">
+                <ul class="navbar-nav ms-auto d-flex flex-row">
+                    <li class="nav-item">
+                        <a class="nav-link contact-btn ms-2" href="#contact-us">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero text-center">
+        <div class="container">
+            <h1>Empowering You to Take Control</h1>
+            <p>Challenging unmet medical needs with innovative pharmaceutical solutions and uncompromising quality standards.</p>
+            <a href="#about" class="btn btn-light btn-lg">Learn More</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <!-- <section id="about" class="py-5 about-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0 about-img-container">
+                    <h2 class="section-title d-lg-none">About Us</h2>
+                    <img src="diabetic.png" alt="Pharmaceutical Research" class="img-fluid about-img shadow">
+                </div>
+                <div class="col-lg-6 about-content">
+                    <h2 class="section-title d-none d-lg-block">About Us</h2>
+                    <p class="mb-4">Cortrust is a leading pharmaceutical company committed to challenging unmet medical needs. </p>
+                    <p> All products are manufactured in facilities approved by major global regulatory agencies including the USFDA, MHRA, EMA, and more.</p>
+                    <div class="d-flex align-items-center mt-4">
+                        <div class="me-4">
+                            <i class="fas fa-certificate fa-2x text-success"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-0">WHO GMP Certified</h5>
+                            <p class="mb-0 text-muted">International standard compliant</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Mission & Vision -->
+    <section class="mission-vision">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <div class="mission-vision-card text-center">
+                        <i class="fas fa-bullseye"></i>
+                        <h3 class="section-title text-center">Our Mission</h3>
+                        <p>Every time we set new benchmarks in healthcare with the power of human expertise.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mission-vision-card text-center">
+                        <i class="fas fa-eye"></i>
+                        <h3 class="section-title text-center">Our Vision</h3>
+                        <p>To make medicines more affordable and accessible to patients worldwide.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Therapeutic Products Portfolio -->
+    <section id="segments" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Therapeutic Products Portfolio</h2>
+            
+            <!-- Dynamic therapy sections will be loaded here -->
+            <div id="therapy-sections-container">
+                <!-- Loading placeholder -->
+                <div class="text-center py-5">
+                    <div class="spinner-border text-success" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <p class="mt-3 text-muted">Loading therapeutic products...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quality Standards -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title text-center">Quality Standards</h2>
+                    <p class="mb-5">Our manufacturing of medicinal products complies with international standards, WHO GMP certified to produce high quality, affordable and high efficacy medicine.</p>
+                    <div class="row g-4">
+                        <div class="col-6 col-md-3">
+                            <div class="bg-white p-4 rounded shadow-sm">
+                                <h3 class="h5">USFDA</h3>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="bg-white p-4 rounded shadow-sm">
+                                <h3 class="h5">MHRA</h3>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="bg-white p-4 rounded shadow-sm">
+                                <h3 class="h5">EMA</h3>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="bg-white p-4 rounded shadow-sm">
+                                <h3 class="h5">WHO GMP</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-us" class="contact-section">
+   <div class="container">
+       <div class="text-center">
+           <h2 class="section-title d-inline-block mb-5">Contact Us</h2>
+       </div>
+       <div class="row justify-content-center">
+           <div class="col-lg-6 col-md-8">
+               <div class="contact-card text-center">
+                   <h3 class="mb-4">Get In Touch</h3>
+                   <div class="contact-info">
+                       <p><i class="fas fa-map-marker-alt"></i> #125, K No. 1191/296/125, Sy No. 59, Bandenallsandra, Bangalore-560105</p>
+                       <p><i class="fas fa-envelope"></i>Cortrust.info@gmail.com</p>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+</section>
+
+    <footer>
+        <div class="container">
+            <div class="text-center copyright">
+                <p class="mb-0">&copy; 2025 Cortrust Therapeutics LLP. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Add bottom fixed contact button -->
+    <a href="#contact-us" class="bottom-contact-btn">Contact Us</a>
+    
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Configuration for therapeutic categories with predefined images
+        // To add new images: just add them to the images array for each category
+        const therapyConfig = {
+            antibiotics: {
+                name: "Antibiotics",
+                icon: "fas fa-shield-virus",
+                description: "Advanced antibiotic solutions for bacterial infections and antimicrobial therapy.",
+                images: [
+                    { path: "images/antibiotics/Picture3.jpg", name: "Broad Spectrum Antibiotics" },
+                    // { path: "images/antibiotics/Picture1.png", name: "Targeted Antimicrobials" }
+                    // To add more images, just add them here:
+                    // { path: "images/antibiotics/Picture2.jpg", name: "New Product Name" }
+                ]
+            },
+            antidiabetics: {
+                name: "Antidiabetics", 
+                icon: "fas fa-tint",
+                description: "Comprehensive diabetes management solutions for better glucose control.",
+                images: [
+                    { path: "images/antidiabetics/Picture1.jpg", name: "Insulin Preparations" },
+                    { path: "images/antidiabetics/Picture2.jpg", name: "Oral Antidiabetics" },
+                    // { path: "images/antidiabetics/Picture3.jpg", name: "Oral Antidiabetics" }
+                
+                ]
+            },
+            gastrointestinal: {
+                name: "Gastrointestinal",
+                icon: "fas fa-pills", 
+                description: "Effective treatments for digestive health and gastrointestinal disorders.",
+                images: [
+                    { path: "images/gastrointestinal/Picture1.jpg", name: "Digestive Enzymes" },
+                    { path: "images/gastrointestinal/Picture2.jpg", name: "Acid Reflux Solutions" },
+                    { path: "images/gastrointestinal/Picture3.jpg", name: "Acid Reflux Solutions" }
+                
+                ]
+            },
+            lipidManagement: {
+                name: "Lipid Management",
+                icon: "fas fa-heartbeat",
+                description: "Advanced lipid control solutions for cardiovascular health protection.",
+                images: [
+                    { path: "images/lipidManagement/Picture1.jpg", name: "Statin Therapies" },
+                    // { path: "images/lipidManagement/Picture1.png", name: "Combination Therapies" }
+                ]
+            },
+            multivitamins: {
+                name: "Multivitamins",
+                icon: "fas fa-leaf",
+                description: "Essential vitamin and mineral supplements for optimal health and wellness.",
+                images: [
+                    { path: "images/multivitamins/Picture1.jpg", name: "Daily Essentials" },
+                    { path: "images/multivitamins/Picture2.png", name: "Specialized Formulas" },
+                    { path: "images/multivitamins/Picture3.jpg", name: "Specialized Formulas" }
+                
+                ]
+            },
+            neurology: {
+                name: "Neurology",
+                icon: "fas fa-brain",
+                description: "Specialized neurological treatments for brain and nervous system disorders.",
+                images: [
+                    { path: "images/neurology/Picture1.jpg", name: "Neuroprotective Agents" },
+                    // { path: "images/neurology/Picture1.png", name: "Seizure Management" }
+                ]
+            },
+            nsaids: {
+                name: "NSAIDs",
+                icon: "fas fa-tablets",
+                description: "Non-steroidal anti-inflammatory drugs for pain and inflammation management.",
+                images: [
+                    { path: "images/nsaids/Picture1.jpg", name: "Pain Relief Solutions" },
+                    // { path: "images/nsaids/Picture1.png", name: "Extended Relief" }
+                ]
+            }
+        };
+
+        // Function to create image element with graceful error handling
+        function createImageElement(imagePath, altText, productName) {
+            const imageItem = document.createElement('div');
+            imageItem.className = 'therapy-image-item';
+            
+            const img = document.createElement('img');
+            img.className = 'therapy-image';
+            img.alt = altText;
+            
+            // const imageInfo = document.createElement('div');
+            // imageInfo.className = 'image-info';
+            // imageInfo.innerHTML = `<p class="image-title">${productName}</p>`;
+            
+            // Handle image load success
+            img.onload = function() {
+                img.style.opacity = '1';
+            };
+            
+            // Handle image load error - show better placeholder
+            img.onerror = function() {
+                const placeholder = document.createElement('div');
+                placeholder.className = 'image-placeholder';
+                placeholder.innerHTML = `
+                    <div class="placeholder-icon">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <small>Coming Soon</small>
+                `;
+                imageItem.replaceChild(placeholder, img);
+            };
+            
+            img.src = imagePath;
+            img.style.opacity = '0';
+            img.style.transition = 'opacity 0.3s ease';
+            
+            imageItem.appendChild(img);
+            // imageItem.appendChild(imageInfo);
+            
+            return imageItem;
+        }
+
+        // Function to create therapy section
+        function createTherapySection(category, config) {
+            const section = document.createElement('div');
+            section.className = 'therapy-section';
+            
+            section.innerHTML = `
+                <div class="therapy-header">
+                    <div class="therapy-title">
+                        <div class="therapy-icon">
+                            <i class="${config.icon}"></i>
+                        </div>
+                        <h3 class="therapy-name">${config.name}</h3>
+                    </div>
+                    <p class="therapy-description">${config.description}</p>
+                </div>
+                <div class="therapy-images-grid"></div>
+            `;
+            
+            const grid = section.querySelector('.therapy-images-grid');
+            
+            if (config.images.length === 0) {
+                // Show placeholder if no images configured
+                const placeholder = document.createElement('div');
+                placeholder.className = 'therapy-image-item';
+                placeholder.innerHTML = `
+                    <div class="image-placeholder">
+                        <div class="placeholder-icon">
+                            <i class="fas fa-plus-circle"></i>
+                        </div>
+                        <small>Products Coming Soon</small>
+                    </div>
+                    <div class="image-info">
+                        <p class="image-title">Add Products</p>
+                    </div>
+                `;
+                grid.appendChild(placeholder);
+            } else {
+                // Add all configured images
+                config.images.forEach(image => {
+                    const imageElement = createImageElement(image.path, `${config.name} - ${image.name}`, image.name);
+                    grid.appendChild(imageElement);
+                });
+            }
+            
+            return section;
+        }
+
+        // Main function to load all therapy sections
+        function loadTherapySections() {
+            const container = document.getElementById('therapy-sections-container');
+            
+            try {
+                // Clear loading indicator
+                container.innerHTML = '';
+                
+                // Process each category
+                for (const [category, config] of Object.entries(therapyConfig)) {
+                    const section = createTherapySection(category, config);
+                    container.appendChild(section);
+                }
+                
+            } catch (error) {
+                console.error('Error loading therapy sections:', error);
+                container.innerHTML = `
+                    <div class="text-center py-5">
+                        <div class="alert alert-warning" role="alert">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            Error loading content. Please refresh the page.
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        // Add smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Load therapy sections when page loads
+        document.addEventListener('DOMContentLoaded', loadTherapySections);
+
+        // Instructions for updating images (displayed in console for developers)
+        console.log(`
+🚀 HOW TO ADD/UPDATE IMAGES:
+
+1. Add your images to the respective folders:
+   - images/antibiotics/
+   - images/antidiabetics/
+   - images/gastrointestinal/
+   - etc.
+
+2. Update the therapyConfig object in this script:
+   
+   Example - to add a new image to antibiotics:
+   antibiotics: {
+       ...
+       images: [
+           { path: "images/antibiotics/Picture1.jpg", name: "Broad Spectrum Antibiotics" },
+           { path: "images/antibiotics/Picture1.png", name: "Targeted Antimicrobials" },
+           { path: "images/antibiotics/NewProduct.jpg", name: "Your New Product Name" } // <- Add this line
+       ]
+   }
+
+3. Commit and push to GitHub - changes will appear automatically!
+
+✅ This system works perfectly with GitHub Pages!
+✅ No server required - completely static!
+✅ No CORS issues!
+        `);
+    </script>
+</body>
+</html>
