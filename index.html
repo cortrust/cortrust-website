@@ -241,6 +241,8 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
             transition: transform 0.2s ease;
             width: 100%;
+            display: flex;
+            flex-direction: column;
         }
         
         .therapy-image-item:hover {
@@ -255,7 +257,7 @@
             display: block;
             transition: opacity 0.3s ease;
             background: #f8f9fa;
-            border-radius: 8px 8px 0 0;
+            border-radius: 0 0 8px 8px;
         }
         
         .therapy-image.loading {
@@ -275,7 +277,8 @@
             padding: 12px;
             text-align: center;
             background: white;
-            border-radius: 0 0 8px 8px;
+            border-radius: 8px 8px 0 0;
+            order: -1;
         }
         
         .image-title {
@@ -297,7 +300,7 @@
             color: #999;
             font-size: 0.8rem;
             text-align: center;
-            border-radius: 8px 8px 0 0;
+            border-radius: 0 0 8px 8px;
             border: 2px dashed #ddd;
         }
         
@@ -854,7 +857,7 @@
                 icon: "fas fa-shield-virus",
                 description: "Advanced antibiotic solutions for bacterial infections and antimicrobial therapy.",
                 images: [
-                    { path: "images/antibiotics/Picture3.jpg", name: "Broad Spectrum Antibiotics" },
+                    { path: "images/antibiotics/Picture3.jpg", name: "NIFITSCORE" },
                     // { path: "images/antibiotics/Picture1.png", name: "Targeted Antimicrobials" }
                     // To add more images, just add them here:
                     // { path: "images/antibiotics/Picture2.jpg", name: "New Product Name" }
@@ -865,8 +868,9 @@
                 icon: "fas fa-tint",
                 description: "Comprehensive diabetes management solutions for better glucose control.",
                 images: [
-                    { path: "images/antidiabetics/Picture1.jpg", name: "Insulin Preparations" },
-                    { path: "images/antidiabetics/Picture2.jpg", name: "Oral Antidiabetics" },
+                    { path: "images/antidiabetics/Picture1.jpeg", name: "XYLOSITA 100" },
+                    { path: "images/antidiabetics/Picture2.jpeg", name: "NOVOSITA-M" },
+                    { path: "images/antidiabetics/Picture3.jpg", name: "Gliplast-M3" },
                     // { path: "images/antidiabetics/Picture3.jpg", name: "Oral Antidiabetics" }
                 
                 ]
@@ -876,9 +880,9 @@
                 icon: "fas fa-pills", 
                 description: "Effective treatments for digestive health and gastrointestinal disorders.",
                 images: [
-                    { path: "images/gastrointestinal/Picture1.jpg", name: "Digestive Enzymes" },
-                    { path: "images/gastrointestinal/Picture2.jpg", name: "Acid Reflux Solutions" },
-                    { path: "images/gastrointestinal/Picture3.jpg", name: "Acid Reflux Solutions" }
+                    { path: "images/gastrointestinal/Picture1.jpg", name: "RAZTAG-IT" },
+                    { path: "images/gastrointestinal/Picture2.jpg", name: "Probispore" },
+                    { path: "images/gastrointestinal/Picture3.jpg", name: "DROTAZEN-M" }
                 
                 ]
             },
@@ -887,7 +891,7 @@
                 icon: "fas fa-heartbeat",
                 description: "Advanced lipid control solutions for cardiovascular health protection.",
                 images: [
-                    { path: "images/lipidManagement/Picture1.jpg", name: "Statin Therapies" },
+                    { path: "images/lipidManagement/Picture1.jpg", name: "Rozumont-CV" },
                     // { path: "images/lipidManagement/Picture1.png", name: "Combination Therapies" }
                 ]
             },
@@ -896,9 +900,9 @@
                 icon: "fas fa-leaf",
                 description: "Essential vitamin and mineral supplements for optimal health and wellness.",
                 images: [
-                    { path: "images/multivitamins/Picture1.jpg", name: "Daily Essentials" },
-                    { path: "images/multivitamins/Picture2.png", name: "Specialized Formulas" },
-                    { path: "images/multivitamins/Picture3.jpg", name: "Specialized Formulas" }
+                    { path: "images/multivitamins/Picture1.jpg", name: "Aminostem Forte" },
+                    { path: "images/multivitamins/Picture2.png", name: "TRICHOMONT PLUS" },
+                    { path: "images/multivitamins/Picture3.jpg", name: "Calofil-D" }
                 
                 ]
             },
@@ -907,7 +911,7 @@
                 icon: "fas fa-brain",
                 description: "Specialized neurological treatments for brain and nervous system disorders.",
                 images: [
-                    { path: "images/neurology/Picture1.jpg", name: "Neuroprotective Agents" },
+                    { path: "images/neurology/Picture1.jpg", name: "Nurogress-G" },
                     // { path: "images/neurology/Picture1.png", name: "Seizure Management" }
                 ]
             },
@@ -916,7 +920,8 @@
                 icon: "fas fa-tablets",
                 description: "Non-steroidal anti-inflammatory drugs for pain and inflammation management.",
                 images: [
-                    { path: "images/nsaids/Picture1.jpg", name: "Pain Relief Solutions" },
+                    { path: "images/nsaids/Picture1.jpeg", name: "BREVADOL-P" },
+                    { path: "images/nsaids/Picture2.jpeg", name: "SYNTHADOL-SP" },
                     // { path: "images/nsaids/Picture1.png", name: "Extended Relief" }
                 ]
             }
@@ -931,9 +936,9 @@
             img.className = 'therapy-image';
             img.alt = altText;
             
-            // const imageInfo = document.createElement('div');
-            // imageInfo.className = 'image-info';
-            // imageInfo.innerHTML = `<p class="image-title">${productName}</p>`;
+            const imageInfo = document.createElement('div');
+            imageInfo.className = 'image-info';
+            imageInfo.innerHTML = `<p class="image-title">${productName}</p>`;
             
             // Handle image load success
             img.onload = function() {
@@ -958,7 +963,7 @@
             img.style.transition = 'opacity 0.3s ease';
             
             imageItem.appendChild(img);
-            // imageItem.appendChild(imageInfo);
+            imageItem.appendChild(imageInfo);
             
             return imageItem;
         }
